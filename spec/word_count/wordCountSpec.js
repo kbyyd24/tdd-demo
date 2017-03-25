@@ -45,4 +45,9 @@ describe('word count', function() {
     let countedWord = wordCount.findCountedWord(word, countedWords)
     expect(countedWord).toBe(null)
   })
+
+  it('should return empty array when given an empty array for countWord', function () {
+    let countedWords = wordCount.countWord([])
+    expect(countedWords).toEqual([])
+  })
 })
