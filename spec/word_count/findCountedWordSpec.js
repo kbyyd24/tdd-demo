@@ -1,5 +1,5 @@
 describe('test cases for findCountedWordSpec', () => {
-  let findCountedWord = require('../../lib/word_count/wordCount').findCountedWord;
+  const findCountedWord = require('../../lib/word_count/wordCount').findCountedWord;
   it('should return null when given an empty countedWords array', function () {
     let word = 'a';
     let countedWords = [];

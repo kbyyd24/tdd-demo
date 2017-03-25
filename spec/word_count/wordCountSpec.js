@@ -1,5 +1,5 @@
 describe('test cases for countAndSortWordsFromFile', function() {
-  let wordCount = require('../../lib/word_count/wordCount');
+  const wordCount = require('../../lib/word_count/wordCount');
   it('should return empty array when given a file with no content', function () {
     wordCount.countAndSortWordsFromFile('emptyFile', (sortedCountedWords) => {
       expect(sortedCountedWords).toEqual([]);

@@ -1,5 +1,5 @@
 describe('test cases for countWord', () => {
-  let countWord = require('../../lib/word_count/wordCount').countWord;
+  const countWord = require('../../lib/word_count/wordCount').countWord;
   it('should return empty array when given an empty array for countWord', function () {
     let countedWords = countWord([]);
     expect(countedWords).toEqual([]);
