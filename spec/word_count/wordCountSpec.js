@@ -77,4 +77,9 @@ describe('word count', function() {
     let countedWords = wordCount.countWord(words)
     expect(countedWords).toEqual(expectCountedWords)
   })
+
+  it('should return empty array when given an empty array', function () {
+    let sortedCountedWords = wordCount.sortCountedWordsByCount([])
+    expect(sortedCountedWords).toEqual([])
+  })
 })
