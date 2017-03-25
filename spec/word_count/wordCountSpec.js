@@ -107,4 +107,9 @@ describe('word count', function() {
     let sortedCountedWords = wordCount.sortCountedWordsByCount(countedWords)
     expect(sortedCountedWords).toEqual(expectSortedCountedWords)
   })
+  it('should return empty array when given a file with no content', function () {
+    wordCount.countAndSortWordsFromFile('emptyFile', (sortedCountedWords) => {
+      expect(sortedCountedWords).toEqual([])
+    })
+  })
 })
