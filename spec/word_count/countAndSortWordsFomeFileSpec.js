@@ -1,12 +1,12 @@
 describe('test cases for countAndSortWordsFromFile', function() {
-  const wordCount = require('../../lib/word_count/wordCount');
+  const countAndSortWordsFromFile = require('../../lib/word_count/wordCount').countAndSortWordsFromFile;
   it('should return empty array when given a file with no content', function () {
-    wordCount.countAndSortWordsFromFile('emptyFile', (sortedCountedWords) => {
+    countAndSortWordsFromFile('emptyFile', (sortedCountedWords) => {
       expect(sortedCountedWords).toEqual([]);
     });
   });
   it('should return an array with one sortedCountedWord when given a file with one word', function () {
-    wordCount.countAndSortWordsFromFile('oneWordFile', (sortedCountedWord) => {
+    countAndSortWordsFromFile('oneWordFile', (sortedCountedWord) => {
       expect(sortedCountedWord).toEqual([{word: 'a', count: 1}]);
     });
   });
@@ -19,7 +19,7 @@ describe('test cases for countAndSortWordsFromFile', function() {
       {word: 'd', count: 1},
       {word: 'f', count: 1}
     ];
-    wordCount.countAndSortWordsFromFile('wordsFile', (sortedCountedWords) => {
+    countAndSortWordsFromFile('wordsFile', (sortedCountedWords) => {
       expect(sortedCountedWords).toEqual(expectSortedCountedWords);
     });
   });
