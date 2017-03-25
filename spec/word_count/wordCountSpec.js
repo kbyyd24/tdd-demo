@@ -82,4 +82,9 @@ describe('word count', function() {
     let sortedCountedWords = wordCount.sortCountedWordsByCount([])
     expect(sortedCountedWords).toEqual([])
   })
+  it('should return the same array when given an array with one countedWord', function () {
+    let countedWords = [{word: 'a', count: 3}]
+    let sortedCountedWords = wordCount.sortCountedWordsByCount(countedWords)
+    expect(sortedCountedWords).toEqual(countedWords)
+  })
 })
