@@ -34,9 +34,9 @@ describe('word count', function() {
   })
   it('should return wordCount when given a countedWords array include given word', function () {
     let word = 'a'
-    let wordCount = {word: 'a', count: 0};
-    let countedWords = [wordCount]
+    let expectCountedWord = {word: 'a', count: 0};
+    let countedWords = [expectCountedWord]
     let countedWord = wordCount.findCountedWord(word, countedWords)
-    expect(countedWord).toEqual(wordCount)
+    expect(countedWord).toEqual(expectCountedWord)
   })
 })
