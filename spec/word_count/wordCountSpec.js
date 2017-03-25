@@ -39,4 +39,10 @@ describe('word count', function() {
     let countedWord = wordCount.findCountedWord(word, countedWords)
     expect(countedWord).toEqual(expectCountedWord)
   })
+  it('should return null when given a countedWords array ont include given word', function () {
+    let word = 'a'
+    let countedWords = [{word: 'b', count: 1}]
+    let countedWord = wordCount.findCountedWord(word, countedWords)
+    expect(countedWord).toBe(null)
+  })
 })
