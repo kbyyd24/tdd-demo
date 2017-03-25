@@ -12,4 +12,17 @@ describe('word count', function() {
       expect(words).toEqual(['one'])
     })
   })
+  it('should return an array with words when given a file name which content has words', function () {
+    let wordsFile = 'wordsFile'
+    getFileContentAsArray(wordsFile, words => {
+      expect(words).toEqual([
+        'a', 'a', 'a',
+        'b', 'b', 'b', 'b', 'b',
+        'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+        'd',
+        'e', 'e',
+        'f'
+      ])
+    })
+  })
 })
