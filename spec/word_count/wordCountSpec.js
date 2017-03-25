@@ -25,10 +25,18 @@ describe('word count', function() {
       ])
     })
   })
+
   it('should return null when given an empty countedWords array', function () {
-    let word = 'a';
-    let countedWords = [];
+    let word = 'a'
+    let countedWords = []
     let countedWord = wordCount.findCountedWord(word, countedWords)
     expect(countedWord).toBe(null)
+  })
+  it('should return wordCount when given a countedWords array include given word', function () {
+    let word = 'a'
+    let wordCount = {word: 'a', count: 0};
+    let countedWords = [wordCount]
+    let countedWord = wordCount.findCountedWord(word, countedWords)
+    expect(countedWord).toEqual(wordCount)
   })
 })
