@@ -6,13 +6,13 @@ describe('test cases for getFileContentAsArray', () => {
       expect(words).toEqual([]);
     });
   });
-  it('should return an array with one word when given a file name which content has only one word', function () {
+  it('should return an array with one word when given a file name which content has only one word', () => {
     const oneWordFileName = 'oneWordFile';
     getFileContentAsArray(oneWordFileName, words => {
       expect(words).toEqual(['one']);
     });
   });
-  it('should return an array with words when given a file name which content has words', function () {
+  it('should return an array with words when given a file name which content has words', () => {
     const wordsFile = 'wordsFile';
     getFileContentAsArray(wordsFile, words => {
       expect(words).toEqual([
