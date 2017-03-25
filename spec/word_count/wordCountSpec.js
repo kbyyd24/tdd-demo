@@ -11,7 +11,7 @@ describe('test cases for countAndSortWordsFromFile', function() {
     });
   });
   it('should return an array with sortedCountedWords when given a file with words', function () {
-    let expectSortedCountedWords = [
+    const expectSortedCountedWords = [
       {word: 'c', count: 9},
       {word: 'b', count: 5},
       {word: 'a', count: 3},
