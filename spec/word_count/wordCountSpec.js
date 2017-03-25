@@ -1,26 +1,6 @@
 describe('word count', function() {
   let wordCount = require('../../lib/word_count/wordCount.js');
 
-  it('should return null when given an empty countedWords array', function () {
-    let word = 'a';
-    let countedWords = [];
-    let countedWord = wordCount.findCountedWord(word, countedWords);
-    expect(countedWord).toBe(null);
-  });
-  it('should return wordCount when given a countedWords array include given word', function () {
-    let word = 'a';
-    let expectCountedWord = {word: 'a', count: 0};
-    let countedWords = [expectCountedWord];
-    let countedWord = wordCount.findCountedWord(word, countedWords);
-    expect(countedWord).toEqual(expectCountedWord);
-  });
-  it('should return null when given a countedWords array ont include given word', function () {
-    let word = 'a';
-    let countedWords = [{word: 'b', count: 1}];
-    let countedWord = wordCount.findCountedWord(word, countedWords);
-    expect(countedWord).toBe(null);
-  });
-
   it('should return empty array when given an empty array for countWord', function () {
     let countedWords = wordCount.countWord([]);
     expect(countedWords).toEqual([]);
