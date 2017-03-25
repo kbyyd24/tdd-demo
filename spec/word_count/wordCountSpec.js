@@ -57,4 +57,24 @@ describe('word count', function() {
       expect(countedWord.count).toBe(1)
     }
   })
+  it('should return countedWords when given an array with repeated words', function () {
+    let words = [
+      'a', 'a', 'a',
+      'b', 'b', 'b', 'b', 'b',
+      'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c',
+      'd',
+      'e', 'e',
+      'f'
+    ]
+    let expectCountedWords = [
+      {word: 'a', count: 3},
+      {word: 'b', count: 5},
+      {word: 'c', count: 9},
+      {word: 'd', count: 1},
+      {word: 'e', count: 2},
+      {word: 'f', count: 1}
+    ]
+    let countedWords = wordCount.countWord(words)
+    expect(countedWords).toEqual(expectCountedWords)
+  })
 })
