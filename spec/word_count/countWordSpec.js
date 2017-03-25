@@ -1,17 +1,17 @@
 describe('test cases for countWord', () => {
   const countWord = require('../../lib/word_count/wordCount').countWord;
-  it('should return empty array when given an empty array for countWord', function () {
+  it('should return empty array when given an empty array for countWord', () =>{
     const countedWords = countWord([]);
     expect(countedWords).toEqual([]);
   });
-  it('should return countedWords and each count is 1 when given an array with no repeated word', function () {
+  it('should return countedWords and each count is 1 when given an array with no repeated word', () => {
     const words = ['a', 'b', 'c', 'd', 'e', 'f'];
     const countedWords = countWord(words);
     for (const countedWord of countedWords) {
       expect(countedWord.count).toBe(1);
     }
   });
-  it('should return countedWords when given an array with repeated words', function () {
+  it('should return countedWords when given an array with repeated words', () => {
     const words = [
       'a', 'a', 'a',
       'b', 'b', 'b', 'b', 'b',
