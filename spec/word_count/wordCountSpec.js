@@ -50,4 +50,11 @@ describe('word count', function() {
     let countedWords = wordCount.countWord([])
     expect(countedWords).toEqual([])
   })
+  it('should return countedWords and each count is 1 when given an array with no repeated word', function () {
+    let words = ['a', 'b', 'c', 'd', 'e', 'f']
+    let countedWords = wordCount.countWord(words)
+    for (let countedWord of countedWords) {
+      expect(countedWord.count).toBe(1)
+    }
+  })
 })
