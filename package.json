@@ -1,0 +1,23 @@
+{
+  "name": "tdd-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbyyd24/tdd-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbyyd24/tdd-demo/issues"
+  },
+  "homepage": "https://github.com/kbyyd24/tdd-demo#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
