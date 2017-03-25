@@ -6,7 +6,7 @@ describe('word count', function() {
     expect(words).toEqual([])
   })
   it('should return an array with one word when given a file name which content has only one word', function () {
-    let oneWordFileName = 'oneWordFileName'
+    let oneWordFileName = 'oneWordFile'
     let words = getFileContentAsArray(oneWordFileName)
     expect(words).toEqual(['one'])
   })
