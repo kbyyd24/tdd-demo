@@ -1,5 +1,5 @@
 describe('test cases for sortCountedWord', () => {
-  let sortCountedWordsByCount = require('../../lib/word_count/wordCount').sortCountedWordsByCount;
+  const sortCountedWordsByCount = require('../../lib/word_count/wordCount').sortCountedWordsByCount;
   it('should return empty array when given an empty array', function () {
     let sortedCountedWords = sortCountedWordsByCount([]);
     expect(sortedCountedWords).toEqual([]);

@@ -1,5 +1,5 @@
 describe('test cases for getFileContentAsArray', () => {
-  let getFileContentAsArray = require('../../lib/word_count/wordCount').getFileContentAsArray;
+  const getFileContentAsArray = require('../../lib/word_count/wordCount').getFileContentAsArray;
   it('should return empty array when given a file name which content is empty', () => {
     let emptyFilName = 'emptyFile';
     getFileContentAsArray(emptyFilName, words => {
