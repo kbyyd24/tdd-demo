@@ -112,4 +112,9 @@ describe('word count', function() {
       expect(sortedCountedWords).toEqual([])
     })
   })
+  it('should return an array with one sortedCountedWord when given a file with one word', function () {
+    wordCount.countAndSortWordsFromFile('oneWordFile', (sortedCountedWord) => {
+      expect(sortedCountedWord).toEqual([{word: 'a', count: 1}])
+    })
+  })
 })
